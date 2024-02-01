@@ -14,14 +14,14 @@ document.addEventListener(
         const itemClicked = clickEvent.target
         let starsName = { name: "incorrect" }
         let starsSport = { name: "incorrect" }
-        if (itemClicked.dataset.type === "celebrity") {
+        if (itemClicked.dataset.type === "celebrity") { // Was a celebrity list item clicked?
             for (const celebrity of celebrities) {
-                if (parseInt(itemClicked.dataset.id) === celebrity.id) { // Was a celebrity list item clicked?
+                if (parseInt(itemClicked.dataset.id) === celebrity.id) { // make sure a specifc celebrity is referenced 
 
                     starsName = celebrity.name
                     starsSport = celebrity.sport
                 }
-                // this is currently displaying an array i want objects 
+                
             }
             window.alert(`${starsName} is a ${starsSport} star`)
         }

@@ -7,10 +7,12 @@
     flex-basis: 24%;
     margin: 0 2rem;
     padding: 0.5rem 4rem;
-    border: 1px dotted rgb(61, 129, 196);
+    border: 3px solid rgb(176, 158, 17);
 }
 
 .pairings {
     padding: 1rem 5rem;
 }
-
+ body {
+    background-color: rgb(237, 199, 103);
+ }
