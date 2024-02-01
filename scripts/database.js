@@ -13,7 +13,7 @@ const database = {
         id: 3,
         name: "Anna Bowton",
         email: "abowton2@wisc.edu",
-        spōrt: "Golf"
+        sport: "Golf"
     }, {
         id: 4,
         name: "Hunfredo Drynan",
@@ -36,7 +36,7 @@ const database = {
         sport: "Baseball"
     }, {
         id: 8,
-        mane: "Tiffanie Tubby",
+        name: "Tiffanie Tubby",
         email: "ttubby7@intel.com",
         sport: "Basketball"
     }, {
@@ -101,4 +101,12 @@ const database = {
         celebrityId: 4,
         wish: "Put out a fire as a fireman after riding on the truck with the siren on"
     }]
+}
+
+export const getChildren = () => {
+    return database.children.map(child => ({...child}))
+}
+
+export const getCelebrities = () => {
+    return database.celebrities.map(celebrity => ({...celebrity}))
 }
