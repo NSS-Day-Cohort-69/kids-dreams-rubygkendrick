@@ -12,8 +12,8 @@ document.addEventListener(
     "click",
     (clickEvent) => {
         const itemClicked = clickEvent.target
-        let starsName = { name: "incorrect" }
-        let starsSport = { name: "incorrect" }
+        let starsName = ""
+        let starsSport = ""
         if (itemClicked.dataset.type === "celebrity") { // Was a celebrity list item clicked?
             for (const celebrity of celebrities) {
                 if (parseInt(itemClicked.dataset.id) === celebrity.id) { // make sure a specifc celebrity is referenced 

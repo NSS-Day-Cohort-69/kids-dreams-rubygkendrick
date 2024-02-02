@@ -4,14 +4,14 @@ const kids = getChildren()
 const celebrities = getCelebrities()
 
 const findCelebrityMatch = (kidObject, celebrityArray) => {
-    let celebrityMatch = { name: "incorrect" }
+    let celebrityMatch = ""
 
-    for (const celebrity of celebrities) {
+    for (const celebrity of celebrityArray) {
        let match = celebrity
-        for (const kid of kids) {
-            if (match.id === kidObject.celebrityId)
+        //for (const kid of kids) { 
+            if (match.id === kidObject.celebrityId) // we were going to discuss this... why did I iterate? because i am tired 
                 celebrityMatch = match
-        }
+        //}
     }
 
     return celebrityMatch
@@ -24,11 +24,11 @@ export const Pairings = () => {
     
     for (const kid of kids) {
         const kidsStar = findCelebrityMatch(kid, celebrities)
-        const thisKid = kid
+        //const thisKid = kid <--- this also not necessary 
 
         html += `
         <li>
-            ${thisKid.name} will be making memories with ${kidsStar.name}, a ${kidsStar.sport} star, by ${thisKid.wish}
+            ${kid.name} will be making memories with ${kidsStar.name}, a ${kidsStar.sport} star, by ${kid.wish}
         </li>
     `
 

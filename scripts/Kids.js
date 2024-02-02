@@ -11,8 +11,8 @@ document.addEventListener(
     "click",
     (clickEvent) => {
         const itemClicked = clickEvent.target
-        let childName = { name: "incorrect" }
-        let childWish = { name: "incorrect" }
+        let childName = "" /// changed this to match data type
+        let childWish = ""
         if (itemClicked.dataset.type === "child") { // was a child clicked?
             for (const child of children) {
                 if (parseInt(itemClicked.dataset.id) === child.id) { // Was the specific child clicked? 
